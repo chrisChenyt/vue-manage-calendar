@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 7);
@@ -308,6 +308,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* eslint-disable*/
 
@@ -317,7 +318,8 @@ var inBrowser = typeof window !== 'undefined';
   name: 'cal-panel',
   data: function data() {
     return {
-      i18n: __WEBPACK_IMPORTED_MODULE_0__i18n_js__["a" /* default */]
+      i18n: __WEBPACK_IMPORTED_MODULE_0__i18n_js__["a" /* default */],
+      openUrl: __webpack_require__(10)
     };
   },
 
@@ -785,7 +787,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('span', [_vm._v(_vm._s(_vm.curYearMonth))]), _vm._v(" "), _c('img', {
     attrs: {
-      "src": __webpack_require__(10)
+      "src": _vm.openUrl
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "month-pandect",

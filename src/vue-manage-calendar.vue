@@ -192,6 +192,13 @@ export default {
   height: 7px;
   padding-bottom: 2px;
 }
+.__vev_calendar-wrapper .cal-wrapper .cal-header .title .triangle_border_down{
+  width:0;
+  height:0;
+  border-width:5px 5px 0;
+  border-style:solid;
+  border-color:#5F5550 transparent transparent;/*灰 透明 透明 */
+}
 .__vev_calendar-wrapper .cal-wrapper .cal-header .month-pandect{
   font-size: 12px;
   color: #5F5550;

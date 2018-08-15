@@ -3,7 +3,8 @@
     <div class="cal-header">
       <div class="title" @click="openPicker">
         <span>{{curYearMonth}}</span>
-        <img src="../images/open@2x.png">
+        <img :src="openUrl">
+        <!-- <span class="triangle_border_down"></span> -->
       </div>
       <div class="month-pandect" @click="allMonth()">月度总览</div>
     </div>
@@ -60,6 +61,7 @@ export default {
   data () {
     return {
       i18n,
+      openUrl:require('../images/open@2x.png')
     }
   },
   props: {

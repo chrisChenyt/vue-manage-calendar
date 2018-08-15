@@ -58,6 +58,7 @@ if (process.env.NODE_ENV === 'production') {
     path: path.resolve(__dirname, './dist'),
     filename:'index.js',
     library:'VueEventCalendar',
+    publicPath: '/dist/',
     libraryTarget: 'umd'
   }
   module.exports.devtool = '#source-map'
@@ -65,7 +66,6 @@ if (process.env.NODE_ENV === 'production') {
     css: ExtractTextPlugin.extract({
       use: 'css-loader',
       fallback: 'vue-style-loader', // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
-      publicPath: '../../'
     }),
     less: ExtractTextPlugin.extract({
       use: 'css-loader!less-loader',
