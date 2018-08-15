@@ -3,16 +3,16 @@
     <div class="cal-header">
       <div class="title" @click="openPicker">
         <span>{{curYearMonth}}</span>
-        <img src="../images/open@2x.png">
+        <img src="../../dist/open@2x.png">
       </div>
       <div class="month-pandect" @click="allMonth()">月度总览</div>
     </div>
     <div class="cal-body">
       <div class="l" @click="preMonth">
-        <img class="arrow-left icon" src="../images/left@2x.png">
+        <img class="arrow-left icon" src="../../dist/left@2x.png">
       </div>
       <div class="r" @click="nextMonth">
-        <img class="arrow-right icon" src="../images/right@2x.png">
+        <img class="arrow-right icon" src="../../dist/right@2x.png">
       </div>
       <div class="weeks">
         <span
