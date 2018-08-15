@@ -2,14 +2,14 @@
   "name": "vue-manage-calendar",
   "description": "A simple calendar to mark events for Vue2",
   "version": "1.5.2",
-  "author": "geoffzhu <geoffzhu1992@gmail.com>",
+  "author": "chirschen",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GeoffZhu/vue-manage-calendar"
+    "url": "git+https://github.com/chrisChenyt/vue-manage-calendar"
   },
   "main": "dist/index.js",
   "dependencies": {
@@ -36,9 +36,5 @@
     "vue",
     "eventcalendar",
     "vue-manage-calendar"
-  ],
-  "bugs": {
-    "url": "https://github.com/GeoffZhu/vue-manage-calendar/issues"
-  },
-  "homepage": "http://geoffzhu.cn/vue-manage-calendar/"
+  ]
 }
