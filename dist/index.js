@@ -208,7 +208,7 @@ var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(5),
   /* template */
-  __webpack_require__(13),
+  __webpack_require__(10),
   /* scopeId */
   null,
   /* cssModules */
@@ -308,7 +308,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* eslint-disable*/
 
@@ -318,8 +317,7 @@ var inBrowser = typeof window !== 'undefined';
   name: 'cal-panel',
   data: function data() {
     return {
-      i18n: __WEBPACK_IMPORTED_MODULE_0__i18n_js__["a" /* default */],
-      openUrl: __webpack_require__(10)
+      i18n: __WEBPACK_IMPORTED_MODULE_0__i18n_js__["a" /* default */]
     };
   },
 
@@ -389,6 +387,10 @@ var inBrowser = typeof window !== 'undefined';
       }
       return tempArr;
     },
+    curDate: function curDate() {
+      var tempDate = Date.parse(new Date(this.calendar.params.curYear + '/' + (this.calendar.params.curMonth + 1) + '/01'));
+      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__tools_js__["b" /* dateTimeFormatter */])(tempDate, 'yyyy年MM月');
+    },
     curYearMonth: function curYearMonth() {
       var tempDate = Date.parse(new Date(this.calendar.params.curYear + '/' + (this.calendar.params.curMonth + 1) + '/01'));
       return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__tools_js__["b" /* dateTimeFormatter */])(tempDate, 'yyyy-MM');
@@ -428,7 +430,7 @@ var inBrowser = typeof window !== 'undefined';
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tools_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_cal_panel_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_cal_panel_vue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_cal_panel_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_cal_panel_vue__);
 //
 //
@@ -716,29 +718,11 @@ if (( false ? 'undefined' : _typeof(module)) === 'object' && module.exports) {
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "left@2x.png?4e2ac03bfd51b008a412c34d2cee626a";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "open@2x.png?42e2524fbbe650951695f6d054dd83c7";
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "right@2x.png?206ed3ce9cbeab3d3431c4accfe8e322";
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(4),
   /* template */
-  __webpack_require__(14),
+  __webpack_require__(11),
   /* scopeId */
   null,
   /* cssModules */
@@ -749,7 +733,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 13 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -772,8 +756,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 11 */
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -785,10 +769,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.openPicker
     }
-  }, [_c('span', [_vm._v(_vm._s(_vm.curYearMonth))]), _vm._v(" "), _c('img', {
-    attrs: {
-      "src": _vm.openUrl
-    }
+  }, [_c('span', [_vm._v(_vm._s(_vm.curDate))]), _vm._v(" "), _c('span', {
+    staticClass: "triangle_border_down"
   })]), _vm._v(" "), _c('div', {
     staticClass: "month-pandect",
     on: {
@@ -799,24 +781,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("月度总览")])]), _vm._v(" "), _c('div', {
     staticClass: "cal-body"
   }, [_c('div', {
-    staticClass: "l",
+    staticClass: "l"
+  }, [_c('span', {
+    staticClass: "arrow-left icon",
     on: {
       "click": _vm.preMonth
     }
-  }, [_c('img', {
-    staticClass: "arrow-left icon",
-    attrs: {
-      "src": __webpack_require__(9)
-    }
   })]), _vm._v(" "), _c('div', {
-    staticClass: "r",
+    staticClass: "r"
+  }, [_c('span', {
+    staticClass: "arrow-right icon",
     on: {
       "click": _vm.nextMonth
-    }
-  }, [_c('img', {
-    staticClass: "arrow-right icon",
-    attrs: {
-      "src": __webpack_require__(11)
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "weeks"

@@ -2,18 +2,17 @@
   <div class="cal-wrapper">
     <div class="cal-header">
       <div class="title" @click="openPicker">
-        <span>{{curYearMonth}}</span>
-        <img :src="openUrl">
-        <!-- <span class="triangle_border_down"></span> -->
+        <span>{{curDate}}</span>
+        <span class="triangle_border_down"></span>
       </div>
       <div class="month-pandect" @click="allMonth()">月度总览</div>
     </div>
     <div class="cal-body">
-      <div class="l" @click="preMonth">
-        <img class="arrow-left icon" src="../images/left@2x.png">
+      <div class="l" >
+        <span @click="preMonth" class="arrow-left icon"></span>
       </div>
-      <div class="r" @click="nextMonth">
-        <img class="arrow-right icon" src="../images/right@2x.png">
+      <div class="r" >
+        <span @click="nextMonth" class="arrow-right icon"></span>
       </div>
       <div class="weeks">
         <span
@@ -60,8 +59,7 @@ export default {
   name: 'cal-panel',
   data () {
     return {
-      i18n,
-      openUrl:require('../images/open@2x.png')
+      i18n
     }
   },
   props: {
@@ -126,6 +124,10 @@ export default {
           tempArr.push(tempItem)
       }
       return tempArr
+    },
+    curDate () {
+      let tempDate = Date.parse(new Date(`${this.calendar.params.curYear}/${this.calendar.params.curMonth+1}/01`))
+      return dateTimeFormatter(tempDate, 'yyyy年MM月')
     },
     curYearMonth () {
       let tempDate = Date.parse(new Date(`${this.calendar.params.curYear}/${this.calendar.params.curMonth+1}/01`))
