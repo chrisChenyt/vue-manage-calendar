@@ -64,7 +64,8 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.module.rules[0].options.loaders = {
     css: ExtractTextPlugin.extract({
       use: 'css-loader',
-      fallback: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
+      fallback: 'vue-style-loader', // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
+      publicPath: '../../'
     }),
     less: ExtractTextPlugin.extract({
       use: 'css-loader!less-loader',
