@@ -148,7 +148,6 @@ export default {
 }
 </script>
 <style lang="less">
-
 .__vev_calendar-wrapper .cal-wrapper {
   width:100%;
   padding: 0 15px;
@@ -187,15 +186,15 @@ export default {
   color: #5F5550;
   float: left;
 }
-.__vev_calendar-wrapper .cal-wrapper .cal-header .title .triangle_border_down{
-  width:0;
-  height:0;
-  border-width: 4px 3px 0;
-  border-style: solid;
-  float: right;
-  margin: 8px 0 0 3px;
-  border-color:#5F5550 transparent transparent;/*灰 透明 透明 */
-}
+// .__vev_calendar-wrapper .cal-wrapper .cal-header .title .triangle_border_down{
+//   width:0;
+//   height:0;
+//   border-width: 4px 3px 0;
+//   border-style: solid;
+//   float: right;
+//   margin: 8px 0 0 3px;
+//   border-color:#5F5550 transparent transparent;/*灰 透明 透明 */
+// }
 .__vev_calendar-wrapper .cal-wrapper .cal-header .month-pandect{
   font-size: 12px;
   color: #5F5550;
@@ -305,23 +304,17 @@ export default {
   color: #508DEA;
 }
 
+.icon-xiaotuziCduan_{font-size:30px !important;color: #E5E5E5;}
+.icon-xiaotuziCduan_1{font-size:30px !important;color: #E5E5E5;}
 .__vev_calendar-wrapper .icon {
 	position:absolute;
   margin-top: 90px;
-	width:0;
-  height:0;
-  border-style:solid;
-  border-radius: 2px;
 }
 .__vev_calendar-wrapper .arrow-left.icon {
   left: 15px;
-  border-width: 7.5px 11px 7.5px 0;
-  border-color: transparent #E5E5E5 transparent transparent;/*透明 灰 透明 透明 */
 }
 .__vev_calendar-wrapper .arrow-right.icon {
 	right:15px;
-  border-width:7.5px 0 7.5px 11px;
-  border-color:transparent transparent transparent #E5E5E5;/*透明 透明 透明 灰*/
 }
 .__vev_calendar-wrapper h3,.__vev_calendar-wrapper p {
 	margin:0;
